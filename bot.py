@@ -32,7 +32,7 @@ async def add_word(interaction: discord.Interaction, word: str):
     async with bot.db.acquire() as conn:
         # SQLインジェクション対策のため、$1を使って変数を渡します
         await conn.execute('INSERT INTO words (word) VALUES ($1)', word)
-    await interaction.response.send_message(f"単語「{word}」を追加しました！")
+    await interaction.response.send_message(f"「{word}」を追加しました！")
 
 @bot.tree.command(name="list", description="追加したすべての単語を表示します")
 async def list_words(interaction: discord.Interaction):
