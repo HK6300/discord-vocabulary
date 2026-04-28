@@ -45,7 +45,7 @@ async def list_words(interaction: discord.Interaction):
         
     # rowsから単語を取り出して箇条書きにする
     words_list = "\n".join([f"・{row['word']}" for row in rows])
-    await interaction.response.send_message(f"**【追加された単語リスト】**\n{words_list}")
+    await interaction.response.send_message(f"**【追加された偏見単語リスト】**\n{words_list}")
 
 # 環境変数からトークンを読み込んで起動
 TOKEN = os.environ.get("DISCORD_TOKEN")
