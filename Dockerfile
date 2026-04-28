@@ -4,4 +4,4 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY bot.py .
 # バッファリングを無効にしてログをリアルタイム出力させる
-CMD["python", "-u", "bot.py"]
+CMD ["python", "-u", "bot.py"]
