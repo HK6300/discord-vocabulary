@@ -7,5 +7,3 @@ app = 'discord-vocabulary'
 primary_region = 'nrt'
 
 [build]
-
-
